@@ -1,0 +1,24 @@
+#brand{
+    display: block;;
+    width: 8vh;
+    margin: 2vh;
+    height: 8vh;
+}
+.p-color{
+    color: #9B0034;
+}
+#header-bg,#books,#story{
+    filter: brightness(0.4);
+}
+#card-1,#card-2,#card-3{
+    filter: brightness(0.7);
+}
+.p-bg-color{
+    background: #9B0034 !important;
+}
+.p-bg-color:hover{
+    background: rgba(187, 3, 64, 0.979);
+}
+html {
+    scroll-behavior:smooth;
+  }
