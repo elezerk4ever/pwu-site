@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-  <div class="fixed-action-btn">
-    <a class="btn-floating btn-large p-bg-color" href="#contact">
-      <i class="large material-icons">email</i>
+  <div class="fixed-action-btn hide" id="arrTop">
+    <a class="btn-floating btn-large p-bg-color" href="#">
+      <i class="large material-icons">arrow_upward</i>
     </a>
   </div>
   <div>
@@ -261,10 +261,17 @@
                 <label for="textarea1 ">Messages</label>
               </div>
               <div class="left-align">
-                <button class="btn p-bg-color" onclick="alert('Messages sent')">
-                  Send messages
-                </button>
+                <a class="waves-effect waves-light btn modal-trigger p-bg-color" href="#alert">Send message</a>
+                <div id="alert" class="modal">
+                  <div class="modal-content center-align">
+                    <h4>Your messages was sent</h4>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Okay</a>
+                  </div>
+                </div>
               </div>
+              <br><br><br>
             </div>
             <div class="col s12 m6">
               <div class="card">
@@ -289,7 +296,6 @@
         <div class="col m6 s12">
           <h5 class="white-text">Philippine Women’s University</h5>
           <p class="grey-text text-lighten-4">The Philippine Women’s University or PWU is a non-stock, not-for-profit, non-sectarian educational institution duly existing under the laws of the Republic of the Philippines.</p>
-
 
         </div>
        
@@ -321,6 +327,14 @@
      M.AutoInit();
 $(document).ready(function() {
     $(' textarea#textarea1').characterCounter();
+    $(window).scroll(function() {
+      // alert($(window).scrollTop())
+     if($(window).scrollTop() > 500) {
+          $('#arrTop').removeClass('hide');
+      }else {
+        $('#arrTop').addClass('hide');
+      }
+    });
   });
   </script>
   </body>
